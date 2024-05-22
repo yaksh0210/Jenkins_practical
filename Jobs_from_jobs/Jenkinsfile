@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    stages {
+        stage("Building Challenge 1") {
+            steps {
+                build "challenge 1"
+            }
+        }
+        stage("Building Challenge 2") {
+            steps {
+                build "challenge 2"
+            }
+        }
+        stage("Building Challenge 3") {
+            steps {
+                build "challenge 3"
+            }
+        }
+        stage("Build Status") {
+            steps {
+                echo "Builds completed"
+            }
+        }
+    }
+}

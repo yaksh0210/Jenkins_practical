@@ -1,0 +1,10 @@
+pipeline {
+    agent any
+    stages {
+        stage("Building boolean as true") {
+            steps {
+                build job: 'boolPipeline', parameters: [[$class: 'BooleanParameterValue', name: 'myBool', value: true]]
+            }
+        }
+    }
+}
